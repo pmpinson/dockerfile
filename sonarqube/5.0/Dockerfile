@@ -13,10 +13,10 @@ RUN sed -i 's|#sonar.web.javaAdditionalOpts=|sonar.web.javaAdditionalOpts=-serve
 	sed -i 's|wrapper.java.command=java|#wrapper.java.command=java|g' /app/sonarqube-5.0/conf/wrapper.conf && \
 	sed -i 's|#wrapper.java.command=/path/to/my/jdk/bin/java|wrapper.java.command=/usr/lib/jvm/java-8-oracle/bin/java|g' /app/sonarqube-5.0/conf/wrapper.conf
 
-RUN ln -s /app/sonarqube-5.0/conf /app/conf && \
-	ln -s /app/sonarqube-5.0/logs /app/logs && \
-	ln -s /app/sonarqube-5.0/extensions/plugins /app/plugins && \
-	ln -s /app/sonarqube-5.0/extensions/jdbc-driver /app/jdbc-driver
+#RUN ln -s /app/sonarqube-5.0/conf /app/conf && \
+#	ln -s /app/sonarqube-5.0/logs /app/logs && \
+#	ln -s /app/sonarqube-5.0/extensions/plugins /app/plugins && \
+#	ln -s /app/sonarqube-5.0/extensions/jdbc-driver /app/jdbc-driver
 
 EXPOSE 9000
 
