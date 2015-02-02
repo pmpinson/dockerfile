@@ -21,7 +21,7 @@ must provide :
 
 exposed port **9000**
 
-volume **/app/sonarqube/conf**
+volume **/app/sonarqube/conf**, don't map qt startup, use to backup only
 
 volume **/app/sonarqube/logs**
 
