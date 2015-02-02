@@ -10,7 +10,9 @@ https://registry.hub.docker.com/_/jenkins/
 
 # Build
 
-`docker build --tag=pmpinson/jenkins:1.580.2 . && docker build --tag=pmpinson/jenkins .`
+`docker build --tag=pmpinson/jenkins:1.580.2 .`
+
+`docker build --tag=pmpinson/jenkins .`
 
 # Usage
 
