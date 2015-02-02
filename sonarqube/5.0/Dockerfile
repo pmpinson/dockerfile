@@ -15,8 +15,9 @@ RUN sed -i 's|#sonar.web.javaAdditionalOpts=|sonar.web.javaAdditionalOpts=-serve
 
 RUN ln -s /app/sonarqube-5.0/conf /app/conf && \
 	ln -s /app/sonarqube-5.0/logs /app/logs && \
-	mkdir /app/extensions && \
+	mkdir /app/plugins && \
 	ln -s /app/sonarqube-5.0/extensions/plugins /app/plugins && \
+	mkdir /app/jdbc-driver && \
 	ln -s /app/sonarqube-5.0/extensions/jdbc-driver /app/jdbc-driver
 
 EXPOSE 9000
