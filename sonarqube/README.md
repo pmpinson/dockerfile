@@ -8,7 +8,9 @@ http://www.sonarqube.org/features/
 
 # Build
 
-`docker build --tag=pmpinson/sonarqube:5.0 . && docker build --tag=pmpinson/sonarqube .`
+`docker build --tag=pmpinson/sonarqube:5.0 .`
+
+`docker build --tag=pmpinson/sonarqube .`
 
 # Usage
 
