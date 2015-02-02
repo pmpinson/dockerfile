@@ -21,12 +21,12 @@ must provide :
 
 exposed port **9000**
 
-volume **/app/conf**
+volume **/app/sonarqube/conf**
 
-volume **/app/logs**
+volume **/app/sonarqube/logs**
 
-volume **/app/plugins**
+volume **/app/sonarqube/extensions/plugins**
 
-volume **/app/jdbc-driver**
+volume **/app/sonarqube/extensions/jdbc-driver**
 
 default use for sonar is **admin**, password **admin**, you must change it.
