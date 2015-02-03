@@ -2,10 +2,10 @@ FROM dockerfile/java:oracle-java8
 MAINTAINER Pierre-Marie Pinson, pmpinson@gmail.com
 
 RUN apt-get update && apt-get upgrade -y && \
-	wget http://dist.sonar.codehaus.org/sonarqube-5.0.zip && \
-	unzip sonarqube-5.0.zip -d /app && \
-	rm -f sonarqube-5.0.zip && \
-	mv /app/sonarqube-5.0 /app/sonarqube
+	wget http://dist.sonar.codehaus.org/sonarqube-4.5.2.zip && \
+	unzip sonarqube-4.5.2.zip -d /app && \
+	rm -f sonarqube-4.5.2.zip && \
+	mv /app/sonarqube-4.5.2 /app/sonarqube
 
 RUN sed -i 's|#sonar.web.javaAdditionalOpts=|sonar.web.javaAdditionalOpts=-server|g' /app/sonarqube/conf/sonar.properties && \
 	sed -i 's|#sonar.jdbc.username=sonar|sonar.jdbc.username=root|g' /app/sonarqube/conf/sonar.properties && \
