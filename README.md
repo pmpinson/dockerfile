@@ -6,6 +6,14 @@ this project presents some informations on docker https://www.docker.com/
 
 http://jonathan.bergknoff.com/journal/building-good-docker-images
 
+# tips
+
+## clean docker volume
+always rm docker with -v
+
+## add an entry to hosts to contact docker host in a container
+--add-host=dockerhost:$(ip route | awk '/docker0/ { print $NF }')
+
 # ui tool for docker management
 
 https://github.com/crosbymichael/dockerui
