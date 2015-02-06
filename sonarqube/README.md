@@ -1,6 +1,6 @@
 Supported tags and respective Dockerfile links
 
-* [5.0, latest](5.0/Dockerfile)
+* [4.5.2, latest](4.5.2/Dockerfile)
 
 
 # Sonar
@@ -8,7 +8,7 @@ http://www.sonarqube.org/features/
 
 # Build
 
-`docker build --tag=pmpinson/sonarqube:5.0 .`
+`docker build --tag=pmpinson/sonarqube:4.5.2 .`
 
 `docker build --tag=pmpinson/sonarqube .`
 
@@ -21,7 +21,7 @@ must provide :
 
 exposed port **9000**
 
-volume **/app/sonarqube/conf**, don't map qt startup, use to backup only
+volume **/app/sonarqube/conf**, don't map at startup, use to backup only
 
 volume **/app/sonarqube/logs**
 
