@@ -1,0 +1,16 @@
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_VPC=vpc-0fd6bd6a
+
+docker-machine -D create \
+    --driver amazonec2 \
+    --amazonec2-access-key $AWS_ACCESS_KEY_ID \
+    --amazonec2-secret-key $AWS_SECRET_ACCESS_KEY \
+    --amazonec2-vpc-id $AWS_VPC \
+    --amazonec2-zone d \
+    --amazonec2-root-size 8 \
+    other
+
+eval $(docker-machine env other
+PUBLIC_IP=$(docker-machine inspect other | grep \"IPAddress | awk -F: '{print $2}' | awk -F\" '{print $2}')
+DOCKER_IP=$(docker-machine inspect other | grep PrivateIPAddress | awk -F: '{print $2}' | awk -F\" '{print $2}')
